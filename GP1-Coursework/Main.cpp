@@ -1,38 +1,41 @@
 #include "Engine/Console.h"
 #include "Engine/Input.h"
 #include "Engine/Timer.h"
-#include <string>
+#include "Engine/GameContext.h"
+#include "Games/IGame.h"
+#include "Games/DummyGame.h"
+#include "Menu/Menu.h"
+
+#include <memory>
 
 int main() {
-	Console console(80, 25);
-	Input input;
-	Timer timer;
+    Console console(80, 25);
+    Input input;
+    Timer timer;
+    GameContext ctx{ console, input };
 
-	float x = 40.f, y = 12.f;
-	const float speed = 20.f; //cps cell per second
+    Menu menu;
+    menu.Add(L"Game 1", [](GameContext& c) { return std::make_unique<DummyGame>(c, L"Game 1"); });
+    menu.Add(L"Game 2", [](GameContext& c) { return std::make_unique<DummyGame>(c, L"Game 2"); });
 
-	bool running = true;
-	while (running) {
-		const float deltaTime = timer.Tick();
-		input.Update();
+    std::unique_ptr<IGame> game;         // owns the running game, empty while in the menu
 
-		if (input.IsKeyPressed(VK_ESCAPE)) { running = false; }
+    while (!menu.WantsToQuit()) {
+        const float dt = timer.Tick();
+        input.Update();
 
-		if (input.IsKeyHeld(VK_LEFT)) { x -= speed * deltaTime; }
-		if (input.IsKeyHeld(VK_RIGHT)) { x += speed * deltaTime; }
-		if (input.IsKeyHeld(VK_UP)) { y -= speed * deltaTime; }
-		if (input.IsKeyHeld(VK_DOWN)) { y += speed * deltaTime; }
+        if (game) {
+            game->Update(dt);
+            if (game->IsFinished()) game.reset();    // destroys the game, back to menu
+        }
+        else {
+            game = menu.Update(ctx);
+        }
 
-		if (x < 0.0f) { x = 0.0f; }
-		if (x > console.Width() - 1) { x = static_cast<float>(console.Width() - 1); }
-		if (y < 0.0f) { y = 0.0f; }
-		if (y > console.Height() - 1) { y = static_cast<float>(console.Height() - 1); }
-
-		console.Clear();
-		console.DrawString(1, 0, L"Arrows to move, Escape to exit");
-		console.DrawString(1, 1, L"DeltaTime: " + std::to_wstring(deltaTime));
-		console.Draw(static_cast<short>(x), static_cast<short>(y), L'@', 14);
-		console.Present();
-	}
-	return 0;
+        console.Clear();
+        if (game) game->Draw(console);
+        else      menu.Draw(console);
+        console.Present();
+    }
+    return 0;
 }

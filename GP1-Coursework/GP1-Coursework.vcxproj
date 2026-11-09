@@ -144,13 +144,18 @@
     <ClCompile Include="Engine\Input.cpp" />
     <ClCompile Include="Engine\Timer.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Menu\Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Collision.h" />
     <ClInclude Include="Engine\Console.h" />
+    <ClInclude Include="Engine\GameContext.h" />
     <ClInclude Include="Engine\GameObject.h" />
     <ClInclude Include="Engine\Input.h" />
     <ClInclude Include="Engine\Timer.h" />
+    <ClInclude Include="Games\DummyGame.h" />
+    <ClInclude Include="Games\IGame.h" />
+    <ClInclude Include="Menu\Menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,7 +3,7 @@
 GameObject::GameObject(float x, float y, float width, float height, wchar_t icon, WORD colour)
 	: m_x(x), m_y(y), m_width(width), m_height(height), m_icon(icon), m_colour(colour) {}
 
-void GameObject::Update(float deltaTime) {}
+void GameObject::Update(float /*deltaTime*/) {}
 
 void GameObject::Draw(Console& console) const {
 	for (int i = 0; i < m_height; ++i) {
