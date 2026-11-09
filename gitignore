@@ -1,0 +1,57 @@
+# Visual Studio local cache and settings
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+*.VC.db
+*.VC.VC.opendb
+*.ipch
+*.aps
+
+# Build output
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+Win32/
+ARM/
+ARM64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Compiled objects and binaries
+*.obj
+*.o
+*.pch
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.lib
+*.exp
+*.idb
+*.tlog
+*.log
+*.lastbuildstate
+*.iobj
+*.ipdb
+
+# Visual Studio 2015+ cache folders
+.vscode/
+*.rsuser
+.cache/
+CMakeCache.txt
+CMakeFiles/
+
+# OS junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store

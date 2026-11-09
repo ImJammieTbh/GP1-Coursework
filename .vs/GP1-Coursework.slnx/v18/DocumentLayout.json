@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Code\\GP1-Coursework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Input.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Engine\\Input.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Engine\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Engine\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Engine\\Collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Console.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -17,6 +21,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Engine\\Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Input.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Engine\\Input.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Engine\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Engine\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Input.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{25FFDB96-E4C5-4D89-B308-B896670A51F7}|GP1-Coursework\\GP1-Coursework.vcxproj|solutionrelative:GP1-Coursework\\Engine\\Input.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,45 +55,110 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameObject.cpp",
+              "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\GameObject.cpp",
+              "RelativeDocumentMoniker": "GP1-Coursework\\Engine\\GameObject.cpp",
+              "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\GameObject.cpp",
+              "RelativeToolTip": "GP1-Coursework\\Engine\\GameObject.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-11-09T21:18:57.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\GameObject.h",
+              "RelativeDocumentMoniker": "GP1-Coursework\\Engine\\GameObject.h",
+              "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\GameObject.h",
+              "RelativeToolTip": "GP1-Coursework\\Engine\\GameObject.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-09T21:07:11.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Collision.h",
+              "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Collision.h",
+              "RelativeDocumentMoniker": "GP1-Coursework\\Engine\\Collision.h",
+              "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Collision.h",
+              "RelativeToolTip": "GP1-Coursework\\Engine\\Collision.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-09T21:05:28.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Timer.h",
+              "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Timer.h",
+              "RelativeDocumentMoniker": "GP1-Coursework\\Engine\\Timer.h",
+              "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Timer.h",
+              "RelativeToolTip": "GP1-Coursework\\Engine\\Timer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-11-09T20:39:34.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Timer.cpp",
+              "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Timer.cpp",
+              "RelativeDocumentMoniker": "GP1-Coursework\\Engine\\Timer.cpp",
+              "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Timer.cpp",
+              "RelativeToolTip": "GP1-Coursework\\Engine\\Timer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-11-09T20:39:25.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Input.cpp",
+              "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Input.cpp",
+              "RelativeDocumentMoniker": "GP1-Coursework\\Engine\\Input.cpp",
+              "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Input.cpp",
+              "RelativeToolTip": "GP1-Coursework\\Engine\\Input.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-11-09T20:33:39.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Input.h",
               "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Input.h",
               "RelativeDocumentMoniker": "GP1-Coursework\\Engine\\Input.h",
               "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Input.h",
               "RelativeToolTip": "GP1-Coursework\\Engine\\Input.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-11-09T20:16:08.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Main.cpp",
-              "RelativeDocumentMoniker": "GP1-Coursework\\Main.cpp",
-              "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Main.cpp",
-              "RelativeToolTip": "GP1-Coursework\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-11-09T20:13:50.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Console.cpp",
               "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Console.cpp",
               "RelativeDocumentMoniker": "GP1-Coursework\\Engine\\Console.cpp",
               "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Console.cpp",
               "RelativeToolTip": "GP1-Coursework\\Engine\\Console.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-11-09T20:12:05.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Console.h",
               "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Engine\\Console.h",
               "RelativeDocumentMoniker": "GP1-Coursework\\Engine\\Console.h",
@@ -78,6 +167,19 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-11-09T20:10:50.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Main.cpp",
+              "RelativeDocumentMoniker": "GP1-Coursework\\Main.cpp",
+              "ToolTip": "D:\\Code\\GP1-Coursework\\GP1-Coursework\\Main.cpp",
+              "RelativeToolTip": "GP1-Coursework\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-11-09T20:13:50.164Z",
               "EditorCaption": ""
             }
           ]

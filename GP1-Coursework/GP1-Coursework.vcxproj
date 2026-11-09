@@ -140,11 +140,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Console.cpp" />
+    <ClCompile Include="Engine\GameObject.cpp" />
+    <ClCompile Include="Engine\Input.cpp" />
+    <ClCompile Include="Engine\Timer.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Collision.h" />
     <ClInclude Include="Engine\Console.h" />
+    <ClInclude Include="Engine\GameObject.h" />
     <ClInclude Include="Engine\Input.h" />
+    <ClInclude Include="Engine\Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
