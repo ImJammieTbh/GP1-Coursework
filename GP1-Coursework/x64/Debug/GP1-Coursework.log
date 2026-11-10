@@ -1,8 +1,2 @@
-﻿  Console.cpp
-  GameObject.cpp
-  Input.cpp
-  Timer.cpp
-  Main.cpp
-  Menu.cpp
-  Generating Code...
+﻿  Player.cpp
   GP1-Coursework.vcxproj -> D:\Code\GP1-Coursework\x64\Debug\GP1-Coursework.exe

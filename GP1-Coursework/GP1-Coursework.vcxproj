@@ -143,6 +143,8 @@
     <ClCompile Include="Engine\GameObject.cpp" />
     <ClCompile Include="Engine\Input.cpp" />
     <ClCompile Include="Engine\Timer.cpp" />
+    <ClCompile Include="Games\Invaders\InvadersGame.cpp" />
+    <ClCompile Include="Games\Invaders\Player.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu\Menu.cpp" />
   </ItemGroup>
@@ -155,6 +157,12 @@
     <ClInclude Include="Engine\Timer.h" />
     <ClInclude Include="Games\DummyGame.h" />
     <ClInclude Include="Games\IGame.h" />
+    <ClInclude Include="Games\Invaders\Alien.h" />
+    <ClInclude Include="Games\Invaders\Barrier.h" />
+    <ClInclude Include="Games\Invaders\Config.h" />
+    <ClInclude Include="Games\Invaders\Ground.h" />
+    <ClInclude Include="Games\Invaders\InvadersGame.h" />
+    <ClInclude Include="Games\Invaders\Player.h" />
     <ClInclude Include="Menu\Menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
