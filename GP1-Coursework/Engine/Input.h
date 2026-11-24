@@ -11,6 +11,6 @@ public:
 	bool IsKeyHeld(int key) const;
 
 private:
-	std::array<bool, 256> m_KeysCurrent{};
-	std::array<bool, 256> m_KeysPrevious{};
+	std::array<bool, 256> _KeysCurrent{};
+	std::array<bool, 256> _KeysPrevious{};
 };

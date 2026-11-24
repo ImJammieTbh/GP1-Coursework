@@ -10,16 +10,16 @@
 #include <Windows.h>
 
 void Input::Update() {
-	m_KeysPrevious = m_KeysCurrent;
+	_KeysPrevious = _KeysCurrent;
 	for (int i = 0; i < 256; ++i) {
-		m_KeysCurrent[i] = (GetAsyncKeyState(i) & 0x8000) != 0;
+		_KeysCurrent[i] = (GetAsyncKeyState(i) & 0x8000) != 0;
 	}
 }
 
 bool Input::IsKeyHeld(int key) const {
-	return key >= 0 && key < 256 && m_KeysCurrent[key];
+	return key >= 0 && key < 256 && _KeysCurrent[key];
 }
 
 bool Input::IsKeyPressed(int key) const {
-	return key >= 0 && key < 256 && m_KeysCurrent[key] && !m_KeysPrevious[key];
+	return key >= 0 && key < 256 && _KeysCurrent[key] && _KeysPrevious[key];
 }

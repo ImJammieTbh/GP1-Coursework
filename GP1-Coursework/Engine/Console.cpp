@@ -46,7 +46,7 @@ void Console::Clear() {
 
 void Console::Draw(short x, short y, wchar_t ch, WORD colour) {
     if (x < 0 || y < 0 || x >= m_w || y >= m_h) return;   //clip, never write out of bounds
-    CHAR_INFO& c = m_buffer[static_cast<size_t>(y) * m_w + x];
+    CHAR_INFO& c = m_buffer[static_cast<size_t>(y) * m_w + x]; 
     c.Char.UnicodeChar = ch;
     c.Attributes = colour;
 }

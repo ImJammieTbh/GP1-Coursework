@@ -9,9 +9,9 @@ void GameObject::Draw(Console& console) const {
 	for (int i = 0; i < m_height; ++i) {
 		for (int col = 0; col < m_width; ++col) {
 			console.Draw(
-				static_cast<short>(m_x + col), 
+				static_cast<short>(m_x + col),
 				static_cast<short>(m_y + i),
-				m_icon, 
+				m_icon,
 				m_colour
 			);
 		}
