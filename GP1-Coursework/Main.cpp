@@ -5,6 +5,7 @@
 #include "Games/IGame.h"
 #include "Games/DummyGame.h"
 #include "Games/Invaders/InvadersGame.h"
+#include "Games/Snake/SnakeGame.h"
 #include "Menu/Menu.h"
 
 #include <memory>
@@ -16,8 +17,8 @@ int main() { //help me
     GameContext context{ console, input };
 
     Menu menu;
-    menu.Add(L"Space Invaders", [](GameContext& c) { return std::make_unique<InvadersGame>(c); });
-    menu.Add(L"Game 2", [](GameContext& c) { return std::make_unique<DummyGame>(c, L"Game 2"); });
+    menu.Add(L"Space Invaders", [](GameContext& c) { return std::make_unique<SpaceInvaders::InvadersGame>(c); });
+    menu.Add(L"Snake", [](GameContext& c) { return std::make_unique<Snake::SnakeGame>(c); });
 
     std::unique_ptr<IGame> game;         //owns the running game, empty while in the menu
 

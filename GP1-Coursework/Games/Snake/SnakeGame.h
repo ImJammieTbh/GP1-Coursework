@@ -2,52 +2,42 @@
 #include "../IGame.h"
 #include "../../Engine/GameContext.h"
 #include "../../Engine/GameObject.h"
-#include "Alien.h"
 #include <memory>
 #include <vector>
-#include <random>
 
-class Player;
-class Missile;
+#include "sPlayer.h"
 
-class InvadersGame : public IGame {
-public: 
-	explicit InvadersGame(GameContext& ctx);
+namespace Snake {
+	class Apple;
 
-	void Update(float deltaTime) override;
-	void Draw(Console& console) const override;
-	bool IsFinished() const override { return _isFinished; }
+	class SnakeGame : public IGame {
+	public:
+		explicit SnakeGame(GameContext& ctx);
 
-	void SpawnMissile(float x, float y);
+		void Update(float deltaTime) override;
+		void Draw(Console& console) const override;
+		bool IsFinished() const override { return _isFinished; }
 
-private:
-	std::vector<std::unique_ptr<GameObject>> _pending;
+		void SpawnMissile(float x, float y);
 
-	void SpawnBounds();
+	private:
+		std::vector<std::unique_ptr<GameObject>> _pending;
 
-	void SpawnAliens();
-	void SpawnBarriers();
+		void SpawnBounds();
 
-	void StepAliens();
-	bool AliensAtBottom() const;
+		void SpawnAliens();
+		void SpawnBarriers();
 
-	Input* _input;
-	Player* _player = nullptr;
-	std::vector<std::unique_ptr<GameObject>> _objects;
-	bool _isFinished = false;
+		void SpawnApple(float x, float y);
 
-	std::vector<Alien*> _aliens;
-	float _moveTimer = 0.0f;
-	float _moveDelay = 1.0f;
-	float _minMoveDelay = 0.1f;   // speed cap so they don't become unplayable
-	float _moveDirection = 1.0f; //1.0f = right, -1.0f = left
-	bool _gameOver = false;
-	bool _playerWon = false;
+		Input* _input;
+		sPlayer* _player = nullptr;
+		std::vector<std::unique_ptr<GameObject>> _objects;
+		bool _isFinished = false;
 
-	Missile* _missile = nullptr;
+		bool _gameOver = false;
+		bool _playerWon = false;
 
-	void AlienShoot();
-	float _bombTimer = 0.0f;
-	float _bombDelay = 1.5f;     // seconds between shots
-	std::mt19937 _rng{ std::random_device{}() };
-};
+		Apple* _apple = nullptr;
+	};
+}

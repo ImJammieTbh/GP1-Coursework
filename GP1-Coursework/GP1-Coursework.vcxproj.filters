@@ -45,6 +45,12 @@
     <ClCompile Include="Games\Invaders\Bomb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Games\Snake\SnakeGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Games\Snake\sPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Console.h">
@@ -74,7 +80,7 @@
     <ClInclude Include="Menu\Menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Games\Invaders\Config.h">
+    <ClInclude Include="Games\Config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Games\Invaders\Alien.h">
@@ -99,6 +105,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Games\Invaders\Bomb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Snake\SnakeGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Snake\sPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Snake\Apple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

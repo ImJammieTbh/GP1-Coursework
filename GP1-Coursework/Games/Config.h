@@ -6,8 +6,7 @@ namespace Config {
 	constexpr int screenHeight = 30; //matches GroundY + 1, change if your console buffer differs
 }
 
-namespace Invaders {
-	//keeps existing Invaders::screenWidth references working
+namespace SpaceInvaders {
 	using Config::screenWidth;
 
 	//fixed rows so objects line up with the sprites drawn on them
