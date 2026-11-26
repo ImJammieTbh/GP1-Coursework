@@ -9,6 +9,7 @@
 #include "Bomb.h"
 
 #include <algorithm>
+#include <map>
 #include "MIssile.h"
 
 InvadersGame::InvadersGame(GameContext& ctx) : _input(&ctx.input) {
@@ -60,6 +61,8 @@ void InvadersGame::SpawnBarriers() {
 
 void InvadersGame::Update(float deltaTime) {
     if (_input->IsKeyPressed(VK_ESCAPE)) { _isFinished = true; return; }
+
+	
 
     for (auto& obj : _objects) obj->Update(deltaTime);
 
@@ -113,6 +116,15 @@ void InvadersGame::Update(float deltaTime) {
 
     const float t = static_cast<float>(_aliens.size()) / (Invaders::alienRows * Invaders::alienCols);
     _moveDelay = _minMoveDelay + t * (1.0f - _minMoveDelay);   // 1.0f = starting delay
+
+    //wincheck
+	if (_player && _player->IsAlive()) {
+		bool allDead = true;
+		for (const Alien* a : _aliens) {
+			if (a->IsAlive()) { allDead = false; break; }
+		}
+		if (allDead) _playerWon = true;
+	}
 }
 
 void InvadersGame::Draw(Console& console) const {
@@ -123,6 +135,12 @@ void InvadersGame::Draw(Console& console) const {
         for (int i = 0; msg[i] != L'\0'; ++i)
             console.Draw(static_cast<short>(27 + i), 12, msg[i], 12);
     }
+
+	if (_playerWon) {
+		const wchar_t* msg = L"YOU WIN - ESC to return";
+		for (int i = 0; msg[i] != L'\0'; ++i)
+			console.Draw(static_cast<short>(27 + i), 12, msg[i], 10);
+	}
 }
 
 void InvadersGame::StepAliens() {
@@ -159,9 +177,30 @@ void InvadersGame::SpawnMissile(float x, float y) {
 }
 
 void InvadersGame::AlienShoot() {
-    if (_aliens.empty()) return;
-    std::uniform_int_distribution<size_t> pick(0, _aliens.size() - 1);
-    const Alien* a = _aliens[pick(_rng)];
-    if (!a->IsAlive()) return;
-    _pending.push_back(std::make_unique<Bomb>(a->X(), a->Y() + 1));
+    //if (_aliens.empty()) return;
+    //std::uniform_int_distribution<size_t> pick(0, _aliens.size() - 1);
+    //const Alien* a = _aliens[pick(_rng)];
+    //if (!a->IsAlive()) return;
+    //_pending.push_back(std::make_unique<Bomb>(a->X(), a->Y() + 1));
+
+	std::map<int, const Alien*> lowestInColumn;
+	for (const Alien* a : _aliens) {
+		if (!a->IsAlive()) continue;
+		const int col = static_cast<int>(a->X());
+		auto it = lowestInColumn.find(col);
+		if (it == lowestInColumn.end() || a->Y() > it->second->Y()) {
+			lowestInColumn[col] = a;
+		}
+	}
+	if (lowestInColumn.empty()) return;
+
+	std::vector<const Alien*> possibleShooters;
+	possibleShooters.reserve(lowestInColumn.size());
+	for (const auto& [col, alien] : lowestInColumn) {
+		possibleShooters.push_back(alien);
+	}
+
+	std::uniform_int_distribution<size_t> pick(0, possibleShooters.size() - 1);
+	const Alien* shooter = possibleShooters[pick(_rng)];
+	_pending.push_back(std::make_unique<Bomb>(shooter->X(), shooter->Y() + 1));
 }

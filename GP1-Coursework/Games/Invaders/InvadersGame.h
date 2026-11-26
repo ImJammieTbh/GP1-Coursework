@@ -42,6 +42,7 @@ private:
 	float _minMoveDelay = 0.1f;   // speed cap so they don't become unplayable
 	float _moveDirection = 1.0f; //1.0f = right, -1.0f = left
 	bool _gameOver = false;
+	bool _playerWon = false;
 
 	Missile* _missile = nullptr;
 
