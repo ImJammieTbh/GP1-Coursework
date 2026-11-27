@@ -19,8 +19,6 @@ namespace Snake {
 		void Draw(Console& console) const override;
 		bool IsFinished() const override { return _isFinished; }
 
-		void SpawnMissile(float x, float y);
-
 		int _maxTailLength = 0;
 		void SpawnTail(float x, float y);
 

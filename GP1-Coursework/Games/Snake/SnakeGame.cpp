@@ -9,6 +9,7 @@
 
 #include <random>
 #include <vector>
+#include <algorithm>
 
 namespace Snake {
 
