@@ -19,6 +19,7 @@ public:
     void Clear();
     void Draw(short x, short y, wchar_t ch, WORD colour = 7);
     void DrawString(short x, short y, const std::wstring& text, WORD colour = 7);
+	void DrawWrappedString(short x, short y, const std::wstring& text, short maxWidth, WORD colour = 7);
     void Present();
 
     short Width() const { return m_w; }

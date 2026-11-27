@@ -171,6 +171,8 @@
     <ClInclude Include="Games\Invaders\MIssile.h" />
     <ClInclude Include="Games\Invaders\Player.h" />
     <ClInclude Include="Games\Snake\Apple.h" />
+    <ClInclude Include="Games\Snake\Bounds.h" />
+    <ClInclude Include="Games\Snake\sPlayerTail.h" />
     <ClInclude Include="Games\Snake\SnakeGame.h" />
     <ClInclude Include="Games\Snake\sPlayer.h" />
     <ClInclude Include="Menu\Menu.h" />

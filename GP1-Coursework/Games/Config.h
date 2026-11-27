@@ -45,3 +45,21 @@ namespace SpaceInvaders {
 	constexpr int barrierGaps = ((PlayMaxX - PlayMinX) - barrierGroupCount * barrierWidth) / (barrierGroupCount + 1);
 	constexpr int barrierX = PlayMinX + barrierGaps; //first barrier group starts after the first gap
 }
+
+namespace Snake {
+	using Config::screenWidth;
+	//fixed rows so objects line up with the sprites drawn on them
+	constexpr int PlayerY = 16;
+	constexpr int GroundY = 28;
+	//bounds are defined as an offset from centre so the play area stays symmetrical
+	constexpr int BoundsHalfWidth = 20;
+	constexpr int BoundsThickness = 2;
+	constexpr int BoundsTopY = 2;
+	constexpr int BoundsBottomY = GroundY; //stops above the player row
+	constexpr int BoundsLeftX = screenWidth / 2 - BoundsHalfWidth;
+	//+1 mirrors the left wall, since both walls are multiple cells wide
+	constexpr int BoundsRightX = screenWidth / 2 + BoundsHalfWidth - BoundsThickness + 1;
+	//what aliens and the player collide against, derived so it can't drift from the walls
+	constexpr int PlayMinX = BoundsLeftX + BoundsThickness; //first free cell
+	constexpr int PlayMaxX = BoundsRightX; //first wall cell, exclusive
+}

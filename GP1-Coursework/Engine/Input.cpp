@@ -21,5 +21,5 @@ bool Input::IsKeyHeld(int key) const {
 }
 
 bool Input::IsKeyPressed(int key) const {
-	return key >= 0 && key < 256 && _KeysCurrent[key] && _KeysPrevious[key];
+	return key >= 0 && key < 256 && _KeysCurrent[key] && !_KeysPrevious[key];
 }

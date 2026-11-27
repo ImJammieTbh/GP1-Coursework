@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "sPlayer.h"
+#include "sPlayerTail.h"
 
 namespace Snake {
 	class Apple;
@@ -20,15 +21,24 @@ namespace Snake {
 
 		void SpawnMissile(float x, float y);
 
+		int _maxTailLength = 0;
+		void SpawnTail(float x, float y);
+
+		bool isGameOver() const { return _gameOver; }
+		bool isPlayerWon() const { return _playerWon; }
+
+		bool isPositionOccupied(float x, float y) const;
+		bool isWallAhead(float x, float y) const;
+
+		void GameOver() { _gameOver = true; }
+
 	private:
 		std::vector<std::unique_ptr<GameObject>> _pending;
 
 		void SpawnBounds();
+		void SpawnHorizontalBounds();
 
-		void SpawnAliens();
-		void SpawnBarriers();
-
-		void SpawnApple(float x, float y);
+		void SpawnApple();
 
 		Input* _input;
 		sPlayer* _player = nullptr;
@@ -39,5 +49,7 @@ namespace Snake {
 		bool _playerWon = false;
 
 		Apple* _apple = nullptr;
+
+		std::vector<sPlayerTail*> _tailSegments;
 	};
 }

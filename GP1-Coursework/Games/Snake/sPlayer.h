@@ -9,11 +9,9 @@ namespace Snake {
 	public:
 		sPlayer(Input& input, SnakeGame& game, float x, float y);
 		void Update(float deltaTime) override;
+		void OnHit(GameObject& other) override;
 
 		Layer GetLayer() const override { return Layer::Player; }
-		void OnHit(GameObject& other) override {
-			if (other.GetLayer() == Layer::AlienBomb) Kill();   // swap for lives/health later
-		}
 
 	private:
 		Input* _input;

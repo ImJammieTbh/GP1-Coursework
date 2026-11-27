@@ -130,6 +130,8 @@ namespace SpaceInvaders {
 	void InvadersGame::Draw(Console& console) const {
 		for (const auto& obj : _objects) obj->Draw(console);
 
+		console.DrawWrappedString(0, 0, L"Use arrow keys to \nmove, press SPACE toshoot. \nShoot the aliens to win. \nDont let the aliens reach the bottom.", 20, 7);
+
 		if (_gameOver) {
 			const wchar_t* msg = L"GAME OVER - ESC to return";
 			for (int i = 0; msg[i] != L'\0'; ++i)

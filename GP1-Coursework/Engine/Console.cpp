@@ -56,6 +56,25 @@ void Console::DrawString(short x, short y, const std::wstring& text, WORD colour
         Draw(static_cast<short>(x + i), y, text[i], colour);
 }
 
+void Console::DrawWrappedString(short x, short y, const std::wstring& text, short maxWidth, WORD colour) {
+	if (maxWidth <= 0) return;
+    
+	short currentX = x;
+	short currentY = y;
+	for (size_t i = 0; i < text.size(); ++i) {
+		wchar_t ch = text[i];
+
+		if (currentX >= x + maxWidth || ch == L'\n') {
+			currentX = x;
+			currentY++;
+
+			if (ch == L'\n') continue; // Skip the newline character
+		}
+		Draw(currentX, currentY, ch, colour);
+		currentX++;
+	}
+}
+
 void Console::Present() {
     SMALL_RECT region{ 0, 0, static_cast<SHORT>(m_w - 1), static_cast<SHORT>(m_h - 1) };
     WriteConsoleOutputW(m_out, m_buffer.data(), COORD{ m_w, m_h }, COORD{ 0, 0 }, &region);

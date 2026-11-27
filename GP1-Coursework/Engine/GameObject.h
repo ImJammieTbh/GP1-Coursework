@@ -13,6 +13,7 @@ enum class Layer {
 	AlienBomb,
 	Fruit,
 	Bounds,
+	PlayerTail
 };
 
 class GameObject {

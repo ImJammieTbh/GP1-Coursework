@@ -116,5 +116,11 @@
     <ClInclude Include="Games\Snake\Apple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Games\Snake\sPlayerTail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\Snake\Bounds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
