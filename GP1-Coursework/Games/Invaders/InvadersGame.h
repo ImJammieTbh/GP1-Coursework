@@ -32,8 +32,16 @@ namespace SpaceInvaders {
 		void StepAliens();
 		bool AliensAtBottom() const;
 
-		Input* _input;
+		//Ownership: _objects (vector of unique_ptr) is the sole owner of every GameObject.
+		//The raw pointers below are non-owning observers. They never call delete, and they
+		//are nulled or pruned each frame before the object they point to is erased.
 		Player* _player = nullptr;
+		Missile* _missile = nullptr;
+
+		//Raw pointer, not owned. Input lives in main() and outlives every game,
+		//so a smart pointer would add ownership semantics that don't exist.
+		Input* _input;
+
 		std::vector<std::unique_ptr<GameObject>> _objects;
 		bool _isFinished = false;
 
@@ -45,7 +53,6 @@ namespace SpaceInvaders {
 		bool _gameOver = false;
 		bool _playerWon = false;
 
-		Missile* _missile = nullptr;
 
 		void AlienShoot();
 		float _bombTimer = 0.0f;
